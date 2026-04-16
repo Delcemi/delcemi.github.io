@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delcemi — Roblox Scripter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <span class="nav-logo">DEL<span class="accent">.</span></span>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link"><span class="nav-num">01</span>About</a></li>
+        <li><a href="#projects" class="nav-link"><span class="nav-num">02</span>Work</a></li>
+        <li><a href="#skills" class="nav-link"><span class="nav-num">03</span>Stack</a></li>
+        <li><a href="#hire" class="nav-link"><span class="nav-num">04</span>Hire</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-top">
+        <span class="hero-status"><span class="status-dot"></span>Available for hire</span>
+        <span class="hero-year mono">EST. 2022</span>
+      </div>
+
+      <div class="hero-name-wrap">
+        <h1 class="hero-name" id="heroName">DELCEMI</h1>
+        <div class="hero-name-outline" aria-hidden="true">DELCEMI</div>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="hero-left">
+          <p class="hero-role">Full-Stack Dev <span class="accent">/</span> Roblox · Luau · Web</p>
+          <p class="hero-desc">Combat, AI, data, weapons, vehicles, front-end.<br>The stuff that actually makes things work.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-link">View work <span class="arrow">↓</span></a>
+            <a href="#hire" class="btn-solid">Hire me</a>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="hstat">
+            <span class="hstat-n">3</span>
+            <span class="hstat-l mono">YRS ROBLOX</span>
+          </div>
+          <div class="hstat">
+            <span class="hstat-n">7</span>
+            <span class="hstat-l mono">YRS TOTAL</span>
+          </div>
+          <div class="hstat">
+            <span class="hstat-n accent">✓</span>
+            <span class="hstat-l mono">SHIPPED FULLY FINISHED GAME</span>
+          </div>
+          <div class="hstat">
+            <span class="hstat-n">300k+</span>
+            <span class="hstat-l mono">LINES OF CODE</span>
+          </div>
+          <div class="hstat">
+            <span class="hstat-n">3M</span>
+            <span class="hstat-l mono">ROBUX REVENUE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num mono">01</span>
+        <span class="section-line"></span>
+        <span class="section-title-sm mono">About</span>
+      </div>
+      <div class="about-grid">
+        <div class="about-left">
+          <h2 class="about-heading">I build what<br><span class="accent">runs the game.</span></h2>
+        </div>
+        <div class="about-right">
+          <p class="about-body">
+            Three years on Roblox, seven writing code across platforms.
+            I do both backend and front-end. Combat engines, AI controllers, data pipelines,
+            physics rigs, and the polished UI/web front-ends that sit on top of them. If it runs the game or the interface, I've probably built one.
+          </p>
+          <p class="about-body">
+            Everything gets written from scratch, structured properly,
+            and built to not fall apart when things scale up.
+          </p>
+          <div class="about-tags">
+            <span class="mono chip">Luau</span>
+            <span class="mono chip">Python</span>
+            <span class="mono chip">OOP</span>
+            <span class="mono chip">Service Architecture</span>
+            <span class="mono chip">Client-Server</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num mono">02</span>
+        <span class="section-line"></span>
+        <span class="section-title-sm mono">Selected Work</span>
+      </div>
+
+
+      <div id="videoLightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;">
+        <video id="lightboxVideo" autoplay muted loop playsinline style="max-width:90vw;max-height:88vh;border-radius:6px;box-shadow:0 0 60px rgba(0,255,136,0.15);"></video>
+      </div>
+
+      <div class="project-list">
+
+        <div class="project-row reveal">
+          <div class="project-index mono accent">01</div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-type mono">Fantasy Spell-Combat RPG &nbsp;·&nbsp; Roblox / Luau</span>
+            </div>
+            <h3 class="project-name">Fantasy Sorcerer Kingdom</h3>
+            <p class="project-summary">
+              Mystical RPG with 23 spells, rune magic, boss summons, and procedural dungeons. Spells are compiled at runtime from raw Luau strings.
+            </p>
+            <div class="project-detail-grid">
+              <div class="project-detail">
+                <span class="detail-label mono">SPELL ENGINE</span>
+                <span class="detail-val">Spells are Luau source strings compiled at runtime inside a sandboxed loadstring env. New spells added as data, zero redeployment</span>
+              </div>
+              <div class="project-detail">
+                <span class="detail-label mono">BOSS SPELL</span>
+                <span class="detail-val">AbyssalWyrm: multi-segment physics serpent (5 mesh parts), 19-keyframe MoonAnimator2 animation, dedicated server handlers</span>
+              </div>
+              <div class="project-detail">
+                <span class="detail-label mono">WORLD</span>
+                <span class="detail-val">Runic procedural dungeon generator, 12 modular room prefabs, 3 difficulty tiers (Easy/Medium/Hard)</span>
+              </div>
+              <div class="project-detail">
+                <span class="detail-label mono">ARCH</span>
+                <span class="detail-val">Service-oriented architecture, typed Luau, pcall fault tolerance, multi-group rank gating across 2 factions + 6 divisions</span>
+              </div>
+            </div>
+            <div class="project-chips">
+              <span class="chip mono">loadstring Sandbox</span><span class="chip mono">23 Spells</span><span class="chip mono">Proc Gen</span><span class="chip mono">Typed Luau</span><span class="chip mono">VFX Pipeline</span>
+            </div>
+            <div class="project-media-row">
+              <div class="project-media">
+                <div class="media-label mono">ABYSSAL WYRM &nbsp;·&nbsp; CASCADE-HIT + HOMING</div>
+                <video class="project-video" src="assets/videos/sk-wyrm.mp4" autoplay muted loop playsinline></video>
+              </div>
+              <div class="project-media">
+                <div class="media-label mono">OTS LOCK-ON &nbsp;·&nbsp; SHOULDER-SWITCH + FOV LOCK</div>
+                <video class="project-video" src="assets/videos/sk-rune-ots.mp4" autoplay muted loop playsinline></video>
+              </div>
+              <div class="project-media">
+                <div class="media-label mono">DIRECTIONAL SLIDE &nbsp;·&nbsp; INPUT-GATED Q-KEY</div>
+                <video class="project-video" src="assets/videos/sk-dash.mp4" autoplay muted loop playsinline></video>
+              </div>
+              <div class="project-media">
+                <div class="media-label mono">BLINK TELEPORT &nbsp;·&nbsp; AFTERIMAGE + LIGHTNING VFX</div>
+                <video class="project-video" src="assets/videos/sk-blink.mp4" autoplay muted loop playsinline></video>
+              </div>
+              <div class="project-media">
+                <div class="media-label mono">SERVER-AUTH FLIGHT &nbsp;·&nbsp; DAMAGE-INTERRUPT + RUNE ORBIT</div>
+                <video class="project-video" src="assets/videos/sk-clip3.mp4" autoplay muted loop playsinline></video>
+              </div>
+              <div class="project-media">
+                <div class="media-label mono">GRAVITY SURGE &nbsp;·&nbsp; AIM-ASSIST CONE + PROJECTILE REPLICATION</div>
+                <video class="project-video" src="assets/videos/sk-clip4.mp4" autoplay muted loop playsinline></video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row reveal">
+          <div class="project-index mono accent">02</div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-type mono">Open-World Action RPG &nbsp;·&nbsp; Roblox / Luau</span>
+            </div>
+            <h3 class="project-name">Star Wars-Themed Open World</h3>
+            <p class="project-summary">
+              Full open-world RPG on Planet Lothal. I built the AI, vehicles, missions, factions, and all the data systems.
+            </p>
+            <div class="project-detail-grid">
+              <div class="project-detail">
+                <span class="detail-label mono">AI</span>
+                <span class="detail-val">OOP controller with weighted target scoring, line-of-sight, dynamic cover-seeking, Parallel Luau execution per NPC</span>
+              </div>
+              <div class="project-detail">
+                <span class="detail-label mono">VEHICLES</span>
+                <span class="detail-val">4-booster PlaneConstraint hover rig, kinetic/static friction switching, gear-based acceleration curves, velocity-delta ejection</span>
+              </div>
+              <div class="project-detail">
+                <span class="detail-label mono">MISSIONS</span>
+                <span class="detail-val">Sequential task runner, team lives system, time-scaled reward falloff, per-player performance points, MVP bonuses</span>
+              </div>
+              <div class="project-detail">
+                <span class="detail-label mono">DATA</span>
+                <span class="detail-val">Full DataStore persistence — weapons, vehicles, missions, bounties, XP, and last-position restore</span>
+              </div>
+            </div>
+            <div class="project-chips">
+              <span class="chip mono">OOP AI</span><span class="chip mono">Parallel Luau</span><span class="chip mono">PlaneConstraint</span><span class="chip mono">DataStore</span><span class="chip mono">Cover System</span>
+            </div>
+            <div class="project-media-row">
+              <div class="project-media">
+                <div class="media-label mono">COMBAT AI &nbsp;·&nbsp; COVER-SEEK + PATHFIND + RAYCAST LOS TARGETING</div>
+                <video class="project-video" src="assets/videos/ow-showcase.mp4" autoplay muted loop playsinline></video>
+              </div>
+              <div class="project-media">
+                <div class="media-label mono">HOVER VEHICLES &nbsp;·&nbsp; ALIGNPOSITION SUSPENSION + VECTORFORCE FRICTION</div>
+                <video class="project-video" src="assets/videos/ow-showcase2.mp4" autoplay muted loop playsinline></video>
+              </div>
+              <div class="project-media">
+                <div class="media-label mono">GPS TRACKER &nbsp;·&nbsp; A-STAR PATHFINDING + CAMERA COMPASS ROTATION</div>
+                <video class="project-video" src="assets/videos/ow-map-gps.mp4" autoplay muted loop playsinline></video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row reveal">
+          <div class="project-index mono accent">03</div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-type mono">Military Faction RP &nbsp;·&nbsp; Roblox / Luau</span>
+            </div>
+            <h3 class="project-name">Star Wars Military Roleplay</h3>
+            <p class="project-summary">
+              Imperial vs. Rebels faction combat server. 40+ weapons, full data systems, and anti-cheat that's been through production.
+            </p>
+            <div class="project-detail-grid">
+              <div class="project-detail">
+                <span class="detail-label mono">WEAPONS</span>
+                <span class="detail-val">40+ weapons, FastCast physics projectiles, server-side hitreg, lag compensation, anti-cheat validation</span>
+              </div>
+              <div class="project-detail">
+                <span class="detail-label mono">DATA</span>
+                <span class="detail-val">DataStore2 .Combine() batching 20 domains, auto-save loops, paginated data migration utility</span>
+              </div>
+              <div class="project-detail">
+                <span class="detail-label mono">BOUNTY</span>
+                <span class="detail-val">Global board with dynamic danger tiers (SAFE→HOPELESS), hunter rank progression, tax system, cross-server merge</span>
+              </div>
+              <div class="project-detail">
+                <span class="detail-label mono">RAGDOLL</span>
+                <span class="detail-val">Programmatic constraint builder generating BallSocket/Hinge rigs from R15 rig structure at runtime</span>
+              </div>
+            </div>
+            <div class="project-chips">
+              <span class="chip mono">FastCast</span><span class="chip mono">DataStore2</span><span class="chip mono">40+ Weapons</span><span class="chip mono">Ragdoll</span><span class="chip mono">Anti-Cheat</span>
+            </div>
+            <div class="project-media-row">
+              <div class="project-media">
+                <div class="media-label mono">STORAGE SYSTEM &nbsp;·&nbsp; DATASTORE2 PERSISTENCE + 8-TYPE SLOTS</div>
+                <video class="project-video" src="assets/videos/sw-storage.mp4" autoplay muted loop playsinline></video>
+              </div>
+              <div class="project-media">
+                <div class="media-label mono">LEADERBOARD UI &nbsp;·&nbsp; GROUP-RANK + KILL-SORT DUAL PRIORITY</div>
+                <video class="project-video" src="assets/videos/sw-leaderboard.mp4" autoplay muted loop playsinline></video>
+              </div>
+              <div class="project-media">
+                <div class="media-label mono">MORPH SYSTEM &nbsp;·&nbsp; GROUP-GATED + 12-VARIANT FACTION SELECTOR</div>
+                <video class="project-video" src="assets/videos/sw-morphs.mp4" autoplay muted loop playsinline></video>
+              </div>
+              <div class="project-media">
+                <div class="media-label mono">OTS GUN SYSTEM &nbsp;·&nbsp; FASTCAST HITSCAN + 45-WEAPON STATS</div>
+                <video class="project-video" src="assets/videos/sw-guns.mp4" autoplay muted loop playsinline></video>
+              </div>
+              <div class="project-media">
+                <div class="media-label mono">LIGHTSABER SYSTEM &nbsp;·&nbsp; LOS-CHECK + INVERSE-DISTANCE FALLOFF</div>
+                <video class="project-video" src="assets/videos/sw-lightsaber.mp4" autoplay muted loop playsinline></video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row reveal">
+          <div class="project-index mono accent">04</div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-type mono">External Tooling &nbsp;·&nbsp; Python / discord.py</span>
+            </div>
+            <h3 class="project-name">Roblox Group Management Bot</h3>
+            <p class="project-summary">
+              459 files, 51,000+ lines. Discord bot handling group ranks, XP, moderation, and verification. Wired directly into the live game.
+            </p>
+            <div class="project-detail-grid">
+              <div class="project-detail">
+                <span class="detail-label mono">BRIDGE</span>
+                <span class="detail-val">Live Discord-to-game command bridge via Roblox MessagingService. Kick, announce, PM, rank refresh to live servers</span>
+              </div>
+              <div class="project-detail">
+                <span class="detail-label mono">API</span>
+                <span class="detail-val">Roblox Open Cloud v2, OAuth 2.0 consent flow with CSRF protection, Bloxlink fallback verification</span>
+              </div>
+              <div class="project-detail">
+                <span class="detail-label mono">SECURITY</span>
+                <span class="detail-val">Kill switch, operation budget rate limiter, HMAC webhook with replay protection, append-only audit log, DPAPI secrets</span>
+              </div>
+              <div class="project-detail">
+                <span class="detail-label mono">DATA</span>
+                <span class="detail-val">20+ table SQLite schema with migrations, session locking, 14-day rolling backup retention</span>
+              </div>
+            </div>
+            <div class="project-chips">
+              <span class="chip mono">Open Cloud API</span><span class="chip mono">OAuth 2.0</span><span class="chip mono">MessagingService</span><span class="chip mono">SQLite</span><span class="chip mono">Security</span>
+            </div>
+            <div class="project-media-row">
+              <div class="project-media">
+                <div class="media-label mono">DISCORD → ROBLOX BRIDGE &nbsp;·&nbsp; MESSAGINGSERVICE + LIVE SERVER RELAY</div>
+                <video class="project-video" src="assets/videos/bot-bridge-v2.mp4" autoplay muted loop playsinline></video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num mono">03</span>
+        <span class="section-line"></span>
+        <span class="section-title-sm mono">Stack</span>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-col">
+          <h4 class="stack-label mono">Languages</h4>
+          <ul class="stack-list">
+            <li>Luau</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>C#</li>
+          </ul>
+        </div>
+        <div class="stack-col">
+          <h4 class="stack-label mono">Roblox APIs</h4>
+          <ul class="stack-list">
+            <li>DataStore / DataStore2</li>
+            <li>RemoteEvents / Functions</li>
+            <li>PathfindingService</li>
+            <li>CollectionService</li>
+            <li>Parallel Luau (Actors)</li>
+            <li>MessagingService</li>
+            <li>Open Cloud API</li>
+            <li>TweenService</li>
+          </ul>
+        </div>
+        <div class="stack-col">
+          <h4 class="stack-label mono">Patterns</h4>
+          <ul class="stack-list">
+            <li>OOP Metatables</li>
+            <li>Service-Oriented Architecture</li>
+            <li>Client-Server Separation</li>
+            <li>loadstring Sandbox</li>
+            <li>FastCast Redux</li>
+            <li>Data-Driven Design</li>
+            <li>Typed Luau</li>
+          </ul>
+        </div>
+        <div class="stack-col">
+          <h4 class="stack-label mono">Front-End</h4>
+          <ul class="stack-list">
+            <li>Responsive Layout (Grid / Flexbox)</li>
+            <li>CSS Animations &amp; Transitions</li>
+            <li>DOM Manipulation</li>
+            <li>Custom UI Components</li>
+            <li>Web Performance</li>
+            <li>GitHub Pages</li>
+          </ul>
+        </div>
+        <div class="stack-col">
+          <h4 class="stack-label mono">Tools</h4>
+          <ul class="stack-list">
+            <li>Roblox Studio</li>
+            <li>MoonAnimator2</li>
+            <li>aiosqlite</li>
+            <li>Git</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="hire">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-num mono">04</span>
+        <span class="section-line"></span>
+        <span class="section-title-sm mono">Hire Me</span>
+      </div>
+
+      <div class="hire-layout">
+        <div class="hire-left">
+          <h2 class="hire-heading">Need something<br><span class="accent">built?</span></h2>
+          <p class="hire-sub">DM me what you need, your timeline, and budget. More detail means a faster quote.</p>
+          <a href="https://discord.com" class="btn-solid" target="_blank" rel="noopener">DM on Discord ↗</a>
+          <div class="hire-payment">
+            <div class="pay-row">
+              <span class="pay-label mono">STARTING AT</span>
+              <span class="pay-val">$15 USD &nbsp;<span class="accent">/</span>&nbsp; 5,000 Robux</span>
+            </div>
+            <div class="pay-row">
+              <span class="pay-label mono">PAYMENT</span>
+              <span class="pay-val">PayPal or Robux &nbsp;·&nbsp; Per task</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hire-right">
+          <div class="hire-box">
+            <h4 class="hire-box-title mono">What I build</h4>
+            <div class="hire-chips">
+              <span class="chip mono">Combat Systems</span>
+              <span class="chip mono">Gun Systems (1st &amp; 3rd Person)</span>
+              <span class="chip mono">Abilities &amp; Skill Systems</span>
+              <span class="chip mono">AI &amp; NPCs</span>
+              <span class="chip mono">Data &amp; Saving</span>
+              <span class="chip mono">Exploit Protection</span>
+              <span class="chip mono">Gameplay Systems</span>
+              <span class="chip mono">Movement &amp; Vehicles</span>
+              <span class="chip mono">Admin Systems</span>
+              <span class="chip mono">Discord Bots</span>
+              <span class="chip mono">World Systems</span>
+              <span class="chip mono">Front-End Web</span>
+              <span class="chip mono">Portfolio &amp; Landing Pages</span>
+            </div>
+          </div>
+          <div class="hire-box hire-box-no">
+            <h4 class="hire-box-title mono">What I don't do</h4>
+            <ul class="hire-nope">
+              <li>UI design or layout work</li>
+              <li>Models, textures, or animations</li>
+              <li>Full game builds or rev-share</li>
+              <li>Anything purely visual</li>
+            </ul>
+          </div>
+          <div class="hire-box">
+            <h4 class="hire-box-title mono">Terms</h4>
+            <ul class="hire-nope">
+              <li>No percentage deals — non-negotiable</li>
+              <li>Fixed quote, no surprise charges</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="mono" style="color:#333">© 2025 Delcemi</span>
+      <span class="mono accent" style="font-size:0.75rem">Roblox / Luau Scripter</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Video lightbox — click whole card to enlarge
+    document.querySelectorAll('.project-media').forEach(function(card) {
+      var v = card.querySelector('.project-video');
+      if (!v) return;
+      card.addEventListener('click', function() {
+        var lb = document.getElementById('videoLightbox');
+        var lbv = document.getElementById('lightboxVideo');
+        lbv.src = v.src;
+        lb.style.display = 'flex';
+        lbv.play();
+      });
+    });
+    document.getElementById('videoLightbox').addEventListener('click', function() {
+      var lb = document.getElementById('videoLightbox');
+      var lbv = document.getElementById('lightboxVideo');
+      lb.style.display = 'none';
+      lbv.pause();
+      lbv.src = '';
+    });
+  </script>
+</body>
+</html>
