@@ -64,8 +64,8 @@
             <span class="hstat-l mono">SHIPPED FULLY FINISHED GAME</span>
           </div>
           <div class="hstat">
-            <span class="hstat-n">300k+</span>
-            <span class="hstat-l mono">LINES OF CODE</span>
+            <span class="hstat-n">20+</span>
+            <span class="hstat-l mono">DATA DOMAINS PERSISTED</span>
           </div>
           <div class="hstat">
             <span class="hstat-n">3M</span>
@@ -95,7 +95,9 @@
           </p>
           <p class="about-body">
             Everything gets written from scratch, structured properly,
-            and built to not fall apart when things scale up.
+            and built to not fall apart when things scale up. Critical paths get smoke-tested
+            against staging before going to live, and persistence layers are session-locked
+            so a bad save can't take a player's progress down with it.
           </p>
           <div class="about-tags">
             <span class="mono chip">Luau</span>
@@ -132,12 +134,12 @@
             </div>
             <h3 class="project-name">Fantasy Sorcerer Kingdom</h3>
             <p class="project-summary">
-              Mystical RPG with 23 spells, rune magic, boss summons, and procedural dungeons. Spells are compiled at runtime from raw Luau strings.
+              Mystical RPG with rune magic, boss summons, and procedural dungeons. Built around a data-driven spell composition framework that scales from the current 23 polished spells to hundreds.
             </p>
             <div class="project-detail-grid">
               <div class="project-detail">
                 <span class="detail-label mono">SPELL ENGINE</span>
-                <span class="detail-val">Spells are Luau source strings compiled at runtime inside a sandboxed loadstring env. New spells added as data, zero redeployment</span>
+                <span class="detail-val">Composable data-driven framework. Spell behaviors registered by ID, modular handlers, hot-reloadable without redeployment. Scales beyond the current 23 polished spells.</span>
               </div>
               <div class="project-detail">
                 <span class="detail-label mono">BOSS SPELL</span>
@@ -153,7 +155,7 @@
               </div>
             </div>
             <div class="project-chips">
-              <span class="chip mono">loadstring Sandbox</span><span class="chip mono">23 Spells</span><span class="chip mono">Proc Gen</span><span class="chip mono">Typed Luau</span><span class="chip mono">VFX Pipeline</span>
+              <span class="chip mono">Data-Driven</span><span class="chip mono">23+ Spells</span><span class="chip mono">Proc Gen</span><span class="chip mono">Typed Luau</span><span class="chip mono">Hot-Reload</span>
             </div>
             <div class="project-media-row">
               <div class="project-media">
@@ -368,11 +370,12 @@
           <h4 class="stack-label mono">Patterns</h4>
           <ul class="stack-list">
             <li>OOP Metatables</li>
+            <li>Knit Service / Controller</li>
             <li>Service-Oriented Architecture</li>
             <li>Client-Server Separation</li>
-            <li>loadstring Sandbox</li>
+            <li>Event-Driven Networking</li>
             <li>FastCast Redux</li>
-            <li>Data-Driven Design</li>
+            <li>Data-Driven Composition</li>
             <li>Typed Luau</li>
           </ul>
         </div>
@@ -391,8 +394,9 @@
           <h4 class="stack-label mono">Tools</h4>
           <ul class="stack-list">
             <li>Roblox Studio</li>
-            <li>Rojo</li>
+            <li>Rojo + Wally</li>
             <li>VSCode (Luau LSP)</li>
+            <li>Selene / Stylua</li>
             <li>MoonAnimator2</li>
             <li>Git / GitHub</li>
             <li>aiosqlite</li>
