@@ -32,7 +32,7 @@
     <div class="hero-inner">
       <div class="hero-top">
         <span class="hero-status"><span class="status-dot"></span>Available for hire</span>
-        <span class="hero-year mono">EST. 2022</span>
+        <span class="hero-year mono">EST. 2023</span>
       </div>
 
       <div class="hero-name-wrap">
@@ -53,7 +53,8 @@
           <div class="hstat">
             <span class="hstat-n">3</span>
             <span class="hstat-l mono">YRS ROBLOX</span>
-          </div>
+          </div><!-- keep in sync with hero-year (EST. 2023) -->
+
           <div class="hstat">
             <span class="hstat-n">7</span>
             <span class="hstat-l mono">YRS TOTAL</span>
@@ -248,7 +249,7 @@
               </div>
               <div class="project-detail">
                 <span class="detail-label mono">DATA</span>
-                <span class="detail-val">DataStore2 .Combine() batching 20 domains, auto-save loops, paginated data migration utility</span>
+                <span class="detail-val">ProfileService with session-locked saves across 20 domains, auto-save loops, paginated data migration utility</span>
               </div>
               <div class="project-detail">
                 <span class="detail-label mono">BOUNTY</span>
@@ -260,11 +261,11 @@
               </div>
             </div>
             <div class="project-chips">
-              <span class="chip mono">FastCast</span><span class="chip mono">DataStore2</span><span class="chip mono">40+ Weapons</span><span class="chip mono">Ragdoll</span><span class="chip mono">Anti-Cheat</span>
+              <span class="chip mono">FastCast</span><span class="chip mono">ProfileService</span><span class="chip mono">40+ Weapons</span><span class="chip mono">Ragdoll</span><span class="chip mono">Anti-Cheat</span>
             </div>
             <div class="project-media-row">
               <div class="project-media">
-                <div class="media-label mono">STORAGE SYSTEM &nbsp;·&nbsp; DATASTORE2 PERSISTENCE + 8-TYPE SLOTS</div>
+                <div class="media-label mono">STORAGE SYSTEM &nbsp;·&nbsp; SESSION-LOCKED PERSISTENCE + 8-TYPE SLOTS</div>
                 <video class="project-video" src="assets/videos/sw-storage.mp4" autoplay muted loop playsinline></video>
               </div>
               <div class="project-media">
@@ -353,7 +354,7 @@
         <div class="stack-col">
           <h4 class="stack-label mono">Roblox APIs</h4>
           <ul class="stack-list">
-            <li>DataStore / DataStore2</li>
+            <li>DataStore / ProfileService</li>
             <li>RemoteEvents / Functions</li>
             <li>PathfindingService</li>
             <li>CollectionService</li>
@@ -390,9 +391,11 @@
           <h4 class="stack-label mono">Tools</h4>
           <ul class="stack-list">
             <li>Roblox Studio</li>
+            <li>Rojo</li>
+            <li>VSCode (Luau LSP)</li>
             <li>MoonAnimator2</li>
+            <li>Git / GitHub</li>
             <li>aiosqlite</li>
-            <li>Git</li>
           </ul>
         </div>
       </div>
@@ -411,7 +414,7 @@
         <div class="hire-left">
           <h2 class="hire-heading">Need something<br><span class="accent">built?</span></h2>
           <p class="hire-sub">DM me what you need, your timeline, and budget. More detail means a faster quote.</p>
-          <a href="https://discord.com" class="btn-solid" target="_blank" rel="noopener">DM on Discord ↗</a>
+          <button type="button" class="btn-solid" id="dmDiscordBtn" onclick="(function(b){navigator.clipboard.writeText('delcemi').then(function(){var t=b.innerText;b.innerText='✓ Username copied! @delcemi';setTimeout(function(){b.innerText=t;},2200);}).catch(function(){b.innerText='@delcemi';});})(this);">DM on Discord · @delcemi ↗</button>
           <div class="hire-payment">
             <div class="pay-row">
               <span class="pay-label mono">STARTING AT</span>
@@ -466,8 +469,8 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <span class="mono" style="color:#333">© 2025 Delcemi</span>
-      <span class="mono accent" style="font-size:0.75rem">Roblox / Luau Scripter</span>
+      <span class="mono" style="color:#333">© 2026 Delcemi</span>
+      <span class="mono accent" style="font-size:0.75rem">Full-Stack Dev · Roblox · Luau · Web</span>
     </div>
   </footer>
 
